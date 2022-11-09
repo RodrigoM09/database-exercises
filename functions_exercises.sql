@@ -38,12 +38,13 @@ AND day(birth_date) = 25;
 SELECT *
 FROM employees
 WHERE year(hire_date) REGEXP '^199'
-  AND month(birth_date) = 12
-  AND day(birth_date) = 25
+AND month(birth_date) = 12
+AND day(birth_date) = 25
 ORDER BY hire_date ASC;
 
 SELECT DATEDIFF(curdate(),hire_date)
 FROM employees
 WHERE year(hire_date) REGEXP '^199'
   AND month(birth_date) = 12
-  AND day(birth_date) = 25;
+  AND day(birth_date) = 25
+ORDER BY DATEDIFF(curdate(),hire_date) DESC;

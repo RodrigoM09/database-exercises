@@ -1,5 +1,6 @@
 USE codeup_test_db;
 
+DROP TABLE IF EXISTS albums;
 
 CREATE TABLE albums (
     album_id INT NOT NULL AUTO_INCREMENT,
@@ -8,5 +9,10 @@ CREATE TABLE albums (
     release_date INT NOT NULL,
     sales DOUBLE NOT NULL,
     genre VARCHAR(35) NOT NULL,
-    PRIMARY KEY (album_id)
+    PRIMARY KEY (album_id),
+    UNIQUE (artist_name, album_name)
 );
+
+DESC albums;
+
+SELECT * FROM albums;
